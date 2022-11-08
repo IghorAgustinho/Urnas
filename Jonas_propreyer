@@ -18,9 +18,10 @@ int main()
             printf("\n vc votou em Juliana Freitas");
             JULIANA_FREITAS1060=1;
             }
-            while()
+            else
             {
-                
+                printf("\n vc saiu");
+                return(0);
             }
                 if(opc==1070)
                 {
@@ -33,7 +34,8 @@ int main()
             }
             else
             {
-                return(0);
+               printf("\n vc saiu");
+               return(0);
             }
                 }
         }
