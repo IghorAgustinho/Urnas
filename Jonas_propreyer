@@ -41,3 +41,109 @@ int main()
         }
     }
 }
+
+parte feita pelo ighor na aula do dia 21/11/2022 com minhas auterações
+
+#include<stdio.h>
+#include<windows.h>
+int SESSAO=7;
+
+
+    int main()
+{
+    int juliana[20], bryan[20], vinicius[20], ana[20];
+    int voto,login,confirmacao;
+
+    int i;
+
+
+    printf("\n");
+    printf("Bem Vindo A Cabine de Votacao\n\n");
+
+    printf("Deseja Fazer seu voto?\n\nPressione 1 para Sim e 2 para Nao:\n");
+
+    scanf("%d,&login");
+
+    system("cls");
+
+    while(login=1)
+    {
+        printf("\n\nDigite O Numero de seu candidato por favor:\n");
+        scanf("%d",&voto);
+        for(i=0;i<0;i++)
+
+    if(voto==1060)
+    {
+
+        printf("Seu Canditato e:\n");
+        printf("JULIANA FREITAS\n");
+        printf("NUMERO 1060\n");
+        printf("Confirma? 1 para sim e 2 para nao:\n");
+        scanf("%d",&confirmacao);
+        system("cls");
+        if(confirmacao=1)
+        {
+            while(i<7)
+            {
+                i++;
+            }
+            if(i=7);
+            {
+                printf("Voto registrado");
+                system("cls");
+                juliana[i]=juliana[i]+1;
+            }
+
+        }
+    }
+
+
+
+    if(voto==1070)
+    {
+
+        printf("Seu Canditato e:\n");
+        printf("BRYAN OLIVEIRA\n");
+        printf("NUMERO 1070\n");
+        printf("Confirma? 1 para sim e 2 para nao:\n");
+        scanf("%d",&confirmacao);
+        system("cls");
+        bryan[i]=bryan[i]++;
+    }
+
+
+
+    if(voto==1080)
+    {
+        printf("Seu Canditato e:\n");
+        printf("VINICIUS ALMEIDA\n");
+        printf("NUMERO 1080\n");
+        printf("Confirma? 1 para sim e 2 para nao:\n");
+        scanf("%d",&confirmacao);
+        system("cls");
+        vinicius[i]=vinicius[i]++;
+    }
+
+
+
+
+
+
+    if(voto==1060)
+    {
+
+        printf("Seu Canditato e:\n");
+        printf("ANA CAROLINA PEIXOTO\n");
+        printf("NUMERO 1090\n");
+        printf("Confirma? 1 para sim e 2 para nao:\n");
+        scanf("%d",&confirmacao);
+        system("cls");
+        ana[i]=ana[i]++;
+    }
+
+    }
+    printf("%d",juliana[i]);
+    printf("%d",vinicius[i]);
+    printf("%d",bryan[i]);
+    printf("%d",ana[i]);
+    }
