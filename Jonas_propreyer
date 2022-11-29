@@ -147,3 +147,156 @@ int SESSAO=7;
     printf("%d",bryan[i]);
     printf("%d",ana[i]);
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ############################################################################################################
+    PARTE DO LEONARDO PARA ADD DEPOIS
+    TERMINAR DE EDITAR A QUESTAO DOS PRINTFs
+    
+    #include<stdio.h>
+#include<windows.h>
+#
+int SESSAO=7;
+
+
+    int main()
+{
+    int juliana[20], bryan[20], vinicius[20], ana[20];
+    int voto,login,confirmacao;
+
+    int i;
+
+
+    printf("\n");
+    printf(" ###BEM VINDO A CABINE DE VOTACAO###\n\n");
+    printf(" DESEJA REALIZAR SEU VOTO?\n Pressione 1 para SIM ou 2 para NAO: ");
+    scanf("%d,&login");
+    system("cls");
+
+    while(login=1)
+    {
+        printf("\n----------------------------------------\n");
+        printf("\n Juliana Freitas --------------- #1060# \n");
+        printf("\n Bryan Oliveira ---------------- #1070# \n");
+        printf("\n Vinicius Almeida -------------- #1080# \n");
+        printf("\n Ana Carolina Peixoto ---------- #1090# \n");
+        printf("\n----------------------------------------\n");
+        printf("\n INFORME O NUMERO DO SEU CANDIDATO: ");
+        scanf("%d",&voto);
+
+        printf("\n\n");
+
+
+    if(voto==1060)
+    {
+
+        printf("Seu candidato e JULIANA FREITAS?\n");
+        printf("\nConfirma? Digite 1 para sim ou 2 para nao:\n");
+        scanf("%d",&confirmacao);
+        system("cls");
+        if(confirmacao=1)
+        {
+            while(i<7)
+            {
+                i++;
+            }
+            if(i=7);
+            {
+                printf("Voto registrado");
+                system("cls");
+                juliana[i]=juliana[i]+1;
+            }
+
+        }
+    }
+
+
+
+    if(voto==1070)
+    {
+
+        printf("Seu Canditato e:\n");
+        printf("BRYAN OLIVEIRA\n");
+        printf("NUMERO 1070\n");
+        printf("Confirma? 1 para sim e 2 para nao:\n");
+        scanf("%d",&confirmacao);
+        system("cls");
+    }
+
+
+
+    if(voto==1080)
+    {
+        printf("Seu Canditato e:\n");
+        printf("VINICIUS ALMEIDA\n");
+        printf("NUMERO 1080\n");
+        printf("Confirma? 1 para sim e 2 para nao:\n");
+        scanf("%d",&confirmacao);
+        system("cls");
+    }
+
+
+
+
+
+
+    if(voto==1090)
+    {
+
+        printf("Seu Canditato e:\n");
+        printf("ANA CAROLINA PEIXOTO\n");
+        printf("NUMERO 1090\n");
+        printf("Confirma? 1 para sim e 2 para nao:\n");
+        scanf("%d",&confirmacao);
+        system("cls");
+    }
+
+    }
+    printf("%d",juliana[i]);
+    printf("%d",vinicius[i]);
+    printf("%d",bryan[i]);
+    printf("%d",ana[i]);
+
+    }
+
+    
+    
+   
