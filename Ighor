@@ -1,99 +1,328 @@
+//Blibiotecas
 #include<stdio.h>
 #include<windows.h>
-int SESSAO=7;
+#include<locale.h>
 
 
-    int main()
-{
+
+//Main Code
+       int main()
+{     
+      //Estética.
+       system("color 0a");
+       setlocale(LC_ALL, "Portuguese");
+      
+      
+      
+	//Variáveis De Votos Dos Candidatos (CADA VETOR É UMA URNA).
     int juliana[20], bryan[20], vinicius[20], ana[20];
-    int voto,login,confirmacao;
-
-    int i;
-
-
-    printf("\n");
-    printf("Bem Vindo A Cabine de Votacao\n\n");
-
-    printf("Deseja Fazer seu voto?\n\nPressione 1 para Sim e 2 para Nao:\n");
-
-    scanf("%d,&login");
-
-    system("cls");
-
-    while(login=1)
+    
+	//Variáveis De Trabalho
+	int voto, login1 = 1 ,login2 = 0 ,confirmacao, i, saida; 
+	
+	
+    //Interface incial
+    while(login1 = 1)
     {
-        printf("\n\nDigite O Numero de seu candidato por favor:\n");
-        scanf("%d",&voto);
+      	system("cls");
+        printf("                            ========================================================");
+        printf("\n\n\n                                       Bem Vindo A Cabine de Votação\n\n\n");
+        printf("                                           Deseja Fazer seu voto?");
+        printf("\n\n\n                                     Pressione 1 para sim e 2 para não:\n\n");
+        printf("                            ========================================================\n");
+        scanf("%d",&login2);
+        system("cls");
+     
+     //Caso O Usuário Digite um número diferente dos possíveis:
+     if(login2<1||login2>2)
+     {
+        printf("                            ========================================================");
+        printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
+        printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
+        printf("                            ========================================================\n");
+	Sleep(2000);
+     }
+     //Caso Seja um dos Números Corretos o Comando "Break;" irá parar o "While".
+     else
+     {
+	 
+     if(login2 == 1 || login2 == 2)
+     {
+     	break;
+	 }
+     }
+   } 
+     
+    //Começo da Área de Votação
+    while(login2 == 1)
+    {
+         printf("                            ========================================================");
+         printf("\n\n\n                                        Insira o Número de Seu Candidato:             \n\n\n");
+         printf("                            ========================================================\n");
+         scanf("%d",&voto);
+         system("cls");
 
-
+    //Primeiro Candidato
     if(voto==1060)
     {
-
-        printf("Seu Canditato e:\n");
-        printf("JULIANA FREITAS\n");
-        printf("NUMERO 1060\n");
-        printf("Confirma? 1 para sim e 2 para nao:\n");
-        scanf("%d",&confirmacao);
-        system("cls");
-        if(confirmacao=1)
-        {
-            while(i<7)
+    printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                               Seu Candidato é:\n\n");
+         printf("\n                                               JULIANA FREITAS");
+         printf("\n                                               NÚMERO 1060\n");
+         printf("\n\n\n                                      Confirma? 1 para sim e 2 para nao:\n");
+         printf("\n\n\n                            ========================================================\n");
+         scanf("%d",&confirmacao);
+         system("cls");
+          
+		//Caso Seja Confirmado o Voto:  
+		 
+		  if(confirmacao==1)
+		  {
+        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
+           
+		    while(i<7){i++;}
+		        
+            if(i==7);
             {
-                i++;
-            }
-            if(i=7);
-            {
-                printf("Voto registrado");
-                system("cls");
-                juliana[i]=juliana[i]+1;
-            }
+                printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
+     
+         printf("\n\n\n                            ========================================================\n");
+         Sleep(2000);
+         system("cls");
+         
+		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
+         juliana[i]=juliana[i]+1;
+         i=0;
+           
+		   }
+	      }
+         
+         //Caso Seja Anulado o Voto:  
+		 
+		  if(confirmacao==2)
+		  {
 
-        }
+                printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
+     
+         printf("\n\n\n                            ========================================================\n");
+          Sleep(2000);
+         system("cls");
+        
+          }
     }
+           
+         
 
 
 
+    //Segundo Candidato
     if(voto==1070)
     {
+    printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                               Seu Candidato é:\n\n");
+         printf("\n                                               BRYAN OLIVEIRA");
+         printf("\n                                               NÚMERO 1070\n");
+         printf("\n\n\n                                      Confirma? 1 para sim e 2 para nao:\n");
+         printf("\n\n\n                            ========================================================\n");
+         scanf("%d",&confirmacao);
+         system("cls");
+          
+		//Caso Seja Confirmado o Voto:  
+		 
+		  if(confirmacao==1)
+		  {
+        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
+           
+		    while(i<7){i++;}
+		        
+            if(i==7);
+            {
+                printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
+     
+         printf("\n\n\n                            ========================================================\n");
+          Sleep(2000);
+         system("cls");
+         
+		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
+         bryan[i]=bryan[i]+1;
+         i=0;
+           
+		   }
+	      }
+         
+         //Caso Seja Anulado o Voto:  
+		 
+		  if(confirmacao==2)
+		  {
 
-        printf("Seu Canditato e:\n");
-        printf("BRYAN OLIVEIRA\n");
-        printf("NUMERO 1070\n");
-        printf("Confirma? 1 para sim e 2 para nao:\n");
-        scanf("%d",&confirmacao);
-        system("cls");
-    }
+                printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
+     
+         printf("\n\n\n                            ========================================================\n");
+          Sleep(2000);
+         system("cls");
+        
+         }       
+   }
 
 
 
+   //Terceiro Candidato
     if(voto==1080)
     {
-        printf("Seu Canditato e:\n");
-        printf("VINICIUS ALMEIDA\n");
-        printf("NUMERO 1080\n");
-        printf("Confirma? 1 para sim e 2 para nao:\n");
-        scanf("%d",&confirmacao);
-        system("cls");
-    }
+    printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                               Seu Candidato é:\n\n");
+         printf("\n                                               VINICIUS ALMEIDA");
+         printf("\n                                               NÚMERO 1080\n");
+         printf("\n\n\n                                      Confirma? 1 para sim e 2 para nao:\n");
+         printf("\n\n\n                            ========================================================\n");
+         scanf("%d",&confirmacao);
+         system("cls");
+          
+		//Caso Seja Confirmado o Voto:  
+		 
+		  if(confirmacao==1)
+		  {
+        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
+           
+		    while(i<7){i++;}
+		        
+            if(i==7);
+            {
+                printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
+     
+         printf("\n\n\n                            ========================================================\n");
+          Sleep(2000);
+         system("cls");
+         
+		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
+         vinicius[i]=vinicius[i]+1;
+         i=0;
+           
+		   }
+	      }
+         
+         //Caso Seja Anulado o Voto:  
+		 
+		  if(confirmacao==2)
+		  {
+
+                printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
+     
+         printf("\n\n\n                            ========================================================\n");
+          Sleep(2000);
+         system("cls");
+        
+          }
+      }
 
 
-
-
-
-
+    //Quarto Candidato
     if(voto==1090)
     {
+    printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                               Seu Candidato é:\n\n");
+         printf("\n                                               ANA CAROLINA");
+         printf("\n                                               NÚMERO 1090\n");
+         printf("\n\n\n                                      Confirma? 1 para sim e 2 para nao:\n");
+         printf("\n\n\n                            ========================================================\n");
+         scanf("%d",&confirmacao);
+         system("cls");
+          
+		//Caso Seja Confirmado o Voto:  
+		 
+		  if(confirmacao==1)
+		  {
+        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
+           
+		    while(i<7){i++;}
+		        
+            if(i==7);
+            {
+                printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
+     
+         printf("\n\n\n                            ========================================================\n");
+          Sleep(2000);
+         system("cls");
+         
+		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
+         ana[i]=ana[i]+1;
+         i=0;
+           
+		   }
+	      }
+         
+         //Caso Seja Anulado o Voto:  
+		 
+		  if(confirmacao==2)
+		  {
 
-        printf("Seu Canditato e:\n");
-        printf("ANA CAROLINA PEIXOTO\n");
-        printf("NUMERO 1090\n");
-        printf("Confirma? 1 para sim e 2 para nao:\n");
-        scanf("%d",&confirmacao);
-        system("cls");
-    }
-   
-    }
-    printf("%d",juliana[i]);
-    }
-
-
+                printf("                            ========================================================\n\n\n");
+     
+         
+         printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
+     
+         printf("\n\n\n                            ========================================================\n");
+          Sleep(2000);
+         system("cls");
+         
+         
+      
+         
+        
+          }
+          
+      }
+  
+       //Caso O Usuário Digite um número diferente dos possíveis:
+     if(voto<1060 || voto>1060 && voto<1070 || voto>1070 && voto <1080 || voto>1080 && voto<1090 || voto>1090)
+     {
+        printf("                            ========================================================");
+        printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
+        printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
+        printf("                            ========================================================\n");
+	Sleep(2000);
+	system("cls");
+     }
+     
+     //Saida do While de Votação
+     printf("                            ========================================================");
+        printf("\n\n\n                                             DESEJA CONTINUAR VOTANDO?                                       \n\n\n");
+        printf("\n\n\n                                                   1-SIM 2-NÃO                                        \n\n\n");
+        printf("                            ========================================================\n");
+        scanf("%d",&saida);
+        if(saida == 1){system("cls");}
+        if(saida == 2){break;}
+		
+	
+     
+	}
+}
