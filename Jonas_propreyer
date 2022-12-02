@@ -1,3 +1,17 @@
+soma
+Votos_Juliana = Votos_Juliana + juliana[i];
+        Votos_bryan= Votos_bryan + bryan[i];
+        Votos_vinicius= Votos_vinicius + vinicius[i];
+        Votos_ana= Votos_ana + ana[i];
+        printf("                            ========================================================");
+        printf("\n\n\n                                             VINICIUS COM %d VOTOS                                     \n\n\n",&Votos_vinicius);
+        printf("\n\n\n                                             BRYAN COM %d VOTOS                                     \n\n\n",&Votos_bryan);
+        printf("\n\n\n                                             ANA COM %d VOTOS                                     \n\n\n",&Votos_ana);
+        printf("\n\n\n                                             JULIANA COM %d VOTOS                                     \n\n\n",&Votos_Juliana);
+        printf("\n\n\n                                                                                          \n\n\n");
+        printf("                            ========================================================\n");
+        printf("\n\n\n");
+
 //JULIANA - BRAYAN - VINICIUS - ANA
 
 if( votos_juliana>votos_bryan && votos_juliana>votos_vinicius && votos_juliana>votos_ana julia)
