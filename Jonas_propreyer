@@ -1,345 +1,358 @@
-#include<stdio.h>
-#include<windows.h>
-#include<locale.h>
+//JULIANA - BRAYAN - VINICIUS - ANA
 
-
-
-//Main Code
-       int main()
+if( votos_juliana>votos_bryan && votos_juliana>votos_vinicius && votos_juliana>votos_ana julia)
 {
-      //Estética.
-       system("color 0a");
-       setlocale(LC_ALL, "Portuguese");
-
-
-
-	//Variáveis De Votos Dos Candidatos (CADA VETOR É UMA URNA).
-    int juliana[20], bryan[20], vinicius[20], ana[20];
-
-	//Variáveis De Trabalho
-	int voto, login1 = 1 ,login2 = 0 ,confirmacao, i, saida, resultados;
-
-
-    //Interface incial
-    while(login1 = 1)
+    if(Votos_bryan>votos_vinicius && votos_bryan>votos_ana julia)
     {
-      	system("cls");
-        printf("                            ========================================================");
-        printf("\n\n\n                                       Bem Vindo A Cabine de Votação\n\n\n");
-        printf("                                           Deseja Fazer seu voto?");
-        printf("\n\n\n                                     Pressione 1 para sim e 2 para não:\n\n");
-        printf("                            ========================================================\n");
-        scanf("%d",&login2);
-        system("cls");
-
-     //Caso O Usuário Digite um número diferente dos possíveis:
-     if(login2<1||login2>2)
-     {
-        printf("                            ========================================================");
-        printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
-        printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
-        printf("                            ========================================================\n");
-	Sleep(2000);
-     }
-     //Caso Seja um dos Números Corretos o Comando "Break;" irá parar o "While".
-     else
-     {
-
-     if(login2 == 1 || login2 == 2)
-     {
-     	break;
-	 }
-     }
-   }
-
-    //Começo da Área de Votação
-    while(login2 == 1)
-    {
-         printf("                            ========================================================");
-         printf("\n\n\n                                        Insira o Número de Seu Candidato:             \n\n\n");
-         printf("                            ========================================================\n");
-         scanf("%d",&voto);
-         system("cls");
-
-    //Primeiro Candidato
-    if(voto==1060)
-    {
-    printf("                            ========================================================\n\n\n");
-
-
-         printf("\n\n\n                                               Seu Candidato é:\n\n");
-         printf("\n                                               JULIANA FREITAS");
-         printf("\n                                               NÚMERO 1060\n");
-         printf("\n\n\n                                      Confirma? 1 para sim e 2 para nao:\n");
-         printf("\n\n\n                            ========================================================\n");
-         scanf("%d",&confirmacao);
-         system("cls");
-
-		//Caso Seja Confirmado o Voto:
-
-		  if(confirmacao==1)
-		  {
-        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
-
-		    while(i<7){i++;}
-
-            if(i==7);
-            {
-                printf("                            ========================================================\n\n\n");
-
-
-         printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
-
-         printf("\n\n\n                            ========================================================\n");
-         Sleep(2000);
-         system("cls");
-
-		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
-         juliana[i]=juliana[i]+1;
-         i=0;
-
-		   }
-	      }
-
-         //Caso Seja Anulado o Voto:
-
-		  if(confirmacao==2)
-		  {
-
-                printf("                            ========================================================\n\n\n");
-
-
-         printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
-
-         printf("\n\n\n                            ========================================================\n");
-          Sleep(2000);
-         system("cls");
-
-          }
+        if(votos_vinicius>votos_ana julia)
+        {
+            printf("");
+        }
     }
+}
 
 
 
 
+//JULIANA - BRYAN - ANA - VINICIUS
 
-    //Segundo Candidato
-    if(voto==1070)
+if( votos_juliana>votos_bryan && votos_juliana>votos_ana && votos_juliana>votos_vinicius)
+{
+    if(Votos_bryan>votos_vinicius && votos_bryan>votos_ana julia)
     {
-    printf("                            ========================================================\n\n\n");
-
-
-         printf("\n\n\n                                               Seu Candidato é:\n\n");
-         printf("\n                                               BRYAN OLIVEIRA");
-         printf("\n                                               NÚMERO 1070\n");
-         printf("\n\n\n                                      Confirma? 1 para sim e 2 para nao:\n");
-         printf("\n\n\n                            ========================================================\n");
-         scanf("%d",&confirmacao);
-         system("cls");
-
-		//Caso Seja Confirmado o Voto:
-
-		  if(confirmacao==1)
-		  {
-        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
-
-		    while(i<7){i++;}
-
-            if(i==7);
-            {
-                printf("                            ========================================================\n\n\n");
-
-
-         printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
-
-         printf("\n\n\n                            ========================================================\n");
-          Sleep(2000);
-         system("cls");
-
-		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
-         bryan[i]=bryan[i]+1;
-         i=0;
-
-		   }
-	      }
-
-         //Caso Seja Anulado o Voto:
-
-		  if(confirmacao==2)
-		  {
-
-                printf("                            ========================================================\n\n\n");
-
-
-         printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
-
-         printf("\n\n\n                            ========================================================\n");
-          Sleep(2000);
-         system("cls");
-
-         }
-   }
+        if(votos_ana>votos_vinicius)
+        {
+            printf("");
+        }
+    }
+}
 
 
 
-   //Terceiro Candidato
-    if(voto==1080)
+//JULIANA - VINICIUS - BRYAN - ANA
+
+if( votos_juliana>votos_vinicius && votos_juliana>votos_brayan && votos_juliana>votos_ana)
+{
+    if(Votos_vinicius>votos_bryan && votos_vinicius>votos_ana julia)
     {
-    printf("                            ========================================================\n\n\n");
+        if(votos_bryan>votos_ana)
+        {
+            printf("");
+        }
+    }
+}
 
 
-         printf("\n\n\n                                               Seu Candidato é:\n\n");
-         printf("\n                                               VINICIUS ALMEIDA");
-         printf("\n                                               NÚMERO 1080\n");
-         printf("\n\n\n                                      Confirma? 1 para sim e 2 para nao:\n");
-         printf("\n\n\n                            ========================================================\n");
-         scanf("%d",&confirmacao);
-         system("cls");
 
-		//Caso Seja Confirmado o Voto:
+//JULIANA - VINICIUS - ANA - BRYAN
 
-		  if(confirmacao==1)
-		  {
-        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
-
-		    while(i<7){i++;}
-
-            if(i==7);
-            {
-                printf("                            ========================================================\n\n\n");
-
-
-         printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
-
-         printf("\n\n\n                            ========================================================\n");
-          Sleep(2000);
-         system("cls");
-
-		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
-         vinicius[i]=vinicius[i]+1;
-         i=0;
-
-		   }
-	      }
-
-         //Caso Seja Anulado o Voto:
-
-		  if(confirmacao==2)
-		  {
-
-                printf("                            ========================================================\n\n\n");
-
-
-         printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
-
-         printf("\n\n\n                            ========================================================\n");
-          Sleep(2000);
-         system("cls");
-
-          }
-      }
-
-
-    //Quarto Candidato
-    if(voto==1090)
+if( votos_juliana>votos_vinicius && votos_juliana>votos_ana && votos_juliana>votos_brayan)
+{
+    if(Votos_vinicius>votos_ana && votos_vinicius>votos_bryan)
     {
-    printf("                            ========================================================\n\n\n");
-
-
-         printf("\n\n\n                                               Seu Candidato é:\n\n");
-         printf("\n                                               ANA CAROLINA");
-         printf("\n                                               NÚMERO 1090\n");
-         printf("\n\n\n                                      Confirma? 1 para sim e 2 para nao:\n");
-         printf("\n\n\n                            ========================================================\n");
-         scanf("%d",&confirmacao);
-         system("cls");
-
-		//Caso Seja Confirmado o Voto:
-
-		  if(confirmacao==1)
-		  {
-        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
-
-		    while(i<7){i++;}
-
-            if(i==7);
-            {
-                printf("                            ========================================================\n\n\n");
-
-
-         printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
-
-         printf("\n\n\n                            ========================================================\n");
-          Sleep(2000);
-         system("cls");
-
-		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
-         ana[i]=ana[i]+1;
-         i=0;
-
-		   }
-	      }
-         //Caso Seja Anulado o Voto:
-
-		  if(confirmacao==2)
-		  {
-
-                printf("                            ========================================================\n\n\n");
-
-
-         printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
-
-         printf("\n\n\n                            ========================================================\n");
-          Sleep(2000);
-         system("cls");
-
-
-
-
-
-          }
-
-      }
-
-       //Caso O Usuário Digite um número diferente dos possíveis:
-     if(voto<1060 || voto>1060 && voto<1070 || voto>1070 && voto <1080 || voto>1080 && voto<1090 || voto>1090)
-     {
-        printf("                            ========================================================");
-        printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
-        printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
-        printf("                            ========================================================\n");
-	Sleep(2000);
-	system("cls");
-     }
-     //Saida do While de Votação
-     printf("                            ========================================================");
-        printf("\n\n\n                                             DESEJA CONTINUAR VOTANDO?                                       \n\n\n");
-        printf("\n\n\n                                                   1-SIM 2-NÃO                                        \n\n\n");
-        printf("                            ========================================================\n");
-        scanf("%d",&saida);
-        if(saida == 1){system("cls");}
-        if(saida == 2)
+        if(votos_ana>votos_bryan)
         {
-        //ver o resultado dos votos
-    printf("                             ========================================================");
-        printf("\n\n\n                                       DESEJA VER O RESULTADO DOS VOTOS?                                      \n\n\n");
-        printf("\n\n\n                                              1-SIM 2-NÃO                                             \n\n\n");
-        printf("                            ========================================================\n");
-        scanf("%d",&resultados);
-        if(resultados == 1){system("cls");}
-        {
-            printf("                             ========================================================");
-        printf("\n\n\n                             quantidade de votos de juiana eh: %d",& juliana[i]);
-        printf("\n\n\n                             quantidade de votos de vinicius eh: %d",& vinicius[i]);
-        printf("\n\n\n                             quantidade de votos de bryan eh: %d",& bryan[i]);
-        printf("\n\n\n                             quantidade de votos de ana eh: %d",& ana[i]);
-            printf("                             ========================================================");
+            printf("");
         }
-        if(resultados == 2)
-        {
-            return(0);
-        }
-        }
+    }
+}
 
-	}
 
+
+//JULIANA - ANA - VINICIUS - BRYAN
+
+if( votos_juliana>votos_ana && votos_juliana>votos_vinicius && votos_juliana>votos_brayan)
+{
+    if(Votos_ana>votos_vinicius && votos_ana>votos_bryan)
+    {
+        if(votos_vinicius>votos_bryan)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//JULIANA - ANA - BRAYAN - VINICIUS
+
+if( votos_juliana>votos_ana && votos_juliana>votos_brayan && votos_juliana>votos_vinicius)
+{
+    if(Votos_ana>votos_brayan && votos_ana>votos_vinicius)
+    {
+        if(votos_brayan>votos_vinicius)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//VINICIUS - JULIANA - BRAYAN - ANA
+
+if( votos_vinicius>votos_juliana && votos_vinicius>votos_brayan && votos_vinicius>votos_ana)
+{
+    if(Votos_juliana>votos_brayan && votos_juliana>votos_ana)
+    {
+        if(votos_brayan>votos_ana)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//VINICIUS - JULIANA - ANA - BRAYAN
+
+if( votos_vinicius>votos_juliana && votos_vinicius>votos_ana && votos_vinicius>votos_brayan)
+{
+    if(Votos_juliana>votos_ana && votos_juliana>votos_brayan)
+    {
+        if(votos_ana>votos_brayan)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//VINICIUS - BRAYAN - JULIANA - ANA
+
+if( votos_vinicius>votos_brayan && votos_vinicius>votos_juliana && votos_vinicius>votos_ana)
+{
+    if(Votos_brayan>votos_juliana && votos_brayan>votos_ana)
+    {
+        if(votos_juliana>votos_ana)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//VINICIUS - BRAYAN - ANA - JULIANA 
+
+if( votos_vinicius>votos_brayan && votos_vinicius>votos_ana && votos_vinicius>votos_juliana)
+{
+    if(Votos_brayan>votos_juliana && votos_brayan>votos_ana)
+    {
+        if(votos_ana>votos_juliana)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//VINICIUS - ANA - JULIANA - BRAYAN
+
+if( votos_vinicius>ana && votos_vinicius>votos_juliana && votos_vinicius>votos_brayan)
+{
+    if(Votos_ana>votos_juliana && votos_ana>votos_brayan)
+    {
+        if(votos_juliana>votos_brayan)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//VINICIUS - ANA - BRAYAN - JULIANA
+
+if( votos_vinicius>votos_ana && votos_vinicius>votos_brayan && votos_vinicius>votos_juliana)
+{
+    if(Votos_ana>votos_brayan && votos_ana>votos_juliana)
+    {
+        if(votos_brayan>votos_juliana)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//BRAYAN - JULIANA - VINICIUS - ANA
+
+if( votos_bryan>votos_juliana && votos_brayan>votos_vinicius && votos_brayan>votos_ana)
+{
+    if(Votos_juliana>votos_vinicius && votos_juliana>votos_ana)
+    {
+        if(votos_vinicius>votos_ana)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//BRAYAN - JULIANA - ANA - VINICIUS
+
+if( votos_bryan>votos_juliana && votos_brayan>votos_ana && votos_brayan>votos_vinicius)
+{
+    if(Votos_juliana>votos_ana && votos_juliana>votos_vinicius)
+    {
+        if(votos_ana>votos_vinicius)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//BRAYAN - VINICIUS - JULIANA - ANA
+
+if( votos_bryan>votos_vinicius && votos_brayan>votos_juliana && votos_brayan>votos_ana)
+{
+    if(Votos_vinicius>votos_juliana && votos_vinicius>votos_ana)
+    {
+        if(votos_juliana>votos_ana)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//BRAYAN - VINICIUS - ANA - JULIANA
+
+if( votos_bryan>votos_vinicius && votos_brayan>votos_ana && votos_brayan>votos_juliana)
+{
+    if(Votos_juliana>votos_vinicius && votos_juliana>votos_ana)
+    {
+        if(votos_vinicius>votos_ana)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//BRAYAN - ANA - VINICIUS  - JULIANA
+
+if( votos_bryan>votos_ana && votos_brayan>votos_vinicius && votos_brayan>votos_juliana)
+{
+    if(Votos_ana>votos_vinicius && votos_juliana>votos_juliana)
+    {
+        if(votos_vinicius>votos_juliana)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//BRAYAN - ANA - JULIANA - VINICIUS  
+
+if( votos_bryan>votos_ana && votos_brayan>votos_juliana && votos_brayan>votos_vinicius)
+{
+    if(Votos_ana>votos_juliana && votos_juliana>votos_vinicius)
+    {
+        if(votos_juliana>votos_vinicius)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//ANA - JULIANA - VINICIUS - BRAYAN 
+
+if( votos_ana>votos_juliana && votos_ana>votos_vinicius && votos_ana>votos_brayan)
+{
+    if(Votos_juliana>votos_vinicius && votos_juliana>votos_brayan)
+    {
+        if(votos_vinicius>votos_brayan)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//ANA - JULIANA - BRAYAN - VINICIUS 
+
+if( votos_ana>votos_juliana && votos_ana>votos_brayan && votos_ana>votos_vinicius)
+{
+    if(Votos_juliana>votos_brayan && votos_juliana>votos_vinicius)
+    {
+        if(votos_brayan>votos_vinicius)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//ANA - VINICIUS - JULIANA - BRAYAN 
+
+if( votos_ana>votos_vinicius && votos_ana>votos_juliana && votos_ana>votos_brayan)
+{
+    if(Votos_vinicius>votos_juliana && votos_juliana>votos_brayan)
+    {
+        if(votos_juliana>votos_brayan)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//ANA - VINICIUS - BRAYAN - JULIANA 
+
+if( votos_ana>votos_vinicius && votos_ana>votos_brayan && votos_ana>votos_juliana)
+{
+    if(Votos_vinicius>votos_brayan && votos_juliana>votos_juliana)
+    {
+        if(votos_brayan>votos_juliana)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//ANA - BRAYAN - JULIANA - VINICIUS  
+
+if( votos_ana>votos_brayan && votos_ana>votos_juliana && votos_ana>votos_vinicius)
+{
+    if(Votos_brayan>votos_juliana && votos_juliana>votos_vinicius)
+    {
+        if(votos_juliana>votos_vinicius)
+        {
+            printf("");
+        }
+    }
+}
+
+
+
+//ANA - BRAYAN - VINICIUS - JULIANA   
+
+if( votos_ana>votos_brayan && votos_ana>votos_vinicius && votos_ana>votos_juliana)
+{
+    if(Votos_brayan>votos_vinicius && votos_juliana>votos_juliana)
+    {
+        if(votos_vinicius>votos_juliana)
+        {
+            printf("");
+        }
+    }
 }
