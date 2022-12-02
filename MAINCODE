@@ -505,7 +505,7 @@ if(votos_juliana > votos_bryan && votos_juliana > votos_vinicius && votos_julian
         
     }
           printf("                            ========================================================\n");
-         printf("\n\n                                             Deseja Continuar?\n\n                                                   1-SIM 2- NÂO\n\n");
+         printf("\n\n                                             Pressione 2 para sair\n\n                                                 2-SAIR\n\n");
          printf("                            ========================================================\n");
     scanf("%d",&login3);
     
@@ -572,8 +572,9 @@ if(votos_bryan>votos_juliana && votos_bryan>votos_vinicius && votos_bryan>votos_
         
     }
          printf("                            ========================================================\n");
-         printf("\n\n                                             Deseja Continuar?\n\n                                             1-SIM 2- NÂO\n\n");
+         printf("\n\n                                             Pressione 2 para sair\n\n                                                 2-SAIR\n\n");
          printf("                            ========================================================\n");
+    scanf("%d",&login3);
     scanf("%d",&login3);
     
     if(login3 == 1) {break;system("cls");}
@@ -637,7 +638,7 @@ if(votos_vinicius>votos_juliana && votos_vinicius>votos_bryan && votos_vinicius>
         
     }
          printf("                            ========================================================\n");
-         printf("\n\n                                             Deseja Continuar?\n\n                                                1-SIM 2- NÂO\n\n");
+         printf("\n\n                                             Pressione 2 para sair\n\n                                                 2-SAIR\n\n");
          printf("                            ========================================================\n");
     scanf("%d",&login3);
     
@@ -701,15 +702,13 @@ if(votos_ana>votos_juliana && votos_ana>votos_bryan && votos_ana>votos_vinicius)
              printf("                                           4- LUGAR: BRYAN\n");
         }
         
-}
+ }
 printf("                            ========================================================\n");
-         printf("\n\n                                             Deseja Continuar?\n\n                                                1-SIM 2- NÂO\n\n");
+         printf("\n\n                                             Pressione 2 para sair\n\n                                                 2-SAIR\n\n");
          printf("                            ========================================================\n");
     scanf("%d",&login3);
     
-    if(login3 == 1) {break;system("cls");}
-    else
-    {if(login3 == 2){system("cls"); printf("\n\n\n\n\n\n\n                                  Se Ta Em C# Amigão, Da Um ALT + F4 ai KKKKKKK\n\n\n\n\n\n\n");}}
+    {if(login3 == 2){system("cls"); login1=0;login2=0;}}
 }
 if(saida<1||saida>3)
      {
@@ -722,8 +721,12 @@ if(saida<1||saida>3)
 	
 	system("cls");
      }
- 
-	   
+     
+        printf("                            ========================================================\n");
+         printf("\n\n                                             Pressione 2 para sair\n\n                                                 2-SAIR\n\n");
+         printf("                            ========================================================\n");
+    scanf("%d",&login3);
+
 
 
 if(login2 == 2)
@@ -732,11 +735,5 @@ if(login2 == 2)
 }
 }
 }
+
 }
-
-	       
-   
-      
-	
-	
-
