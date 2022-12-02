@@ -8,17 +8,15 @@
 //Main Code
        int main()
 {     
-      //Estética.
+       //Estética.
        system("color 0a");
        setlocale(LC_ALL, "Portuguese");
-      
-      
-      
+            
 	//Variáveis De Votos Dos Candidatos (CADA VETOR É UMA URNA).
     int juliana[20], bryan[20], vinicius[20], ana[20];
     
 	//Variáveis De Trabalho
-	int voto, login1 = 1 ,login2 = 0 ,login3 = 0 ,confirmacao, i, saida,sessao; 
+	int voto, login1 = 1 ,login2 = 0 ,confirmacao, i, saida,sessao; 
 	
 	
     //Interface incial
@@ -28,7 +26,7 @@
         system("cls");   
         printf("                            ========================================================");
         printf("\n\n\n                                           Bem Vindo A Cabine de Votação\n\n\n");
-        printf("                                           Insira o Número da Sua Sessão: ");
+        printf("                                       Insira o Número da Sua Sessão / Urna: ");
         printf("\n\n\n                                                    [1]  -  [20]\n\n");
         printf("                            ========================================================\n");
         scanf("%d",&sessao);
@@ -38,8 +36,9 @@
      {
         printf("                            ========================================================");
         printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
-        printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
+        printf("\n\n\n                                               AGUARDE UM MOMENTO                                        \n\n\n");
         printf("                            ========================================================\n");
+        
 	Sleep(2000);
 	sessao=0;
 	system("cls");
@@ -51,17 +50,15 @@
      {
         printf("                            ========================================================");
         printf("\n\n\n                                                  Bem Vindo...\n\n\n");
-        printf("                                            Sua Sessão é A Número: ");
+        printf("                                            Sua Sessão é a de Número: ");
         printf("\n\n\n                                                     [%d]\n\n\n                                         Por Favor Aguarde 3 Segundos.\n\n",sessao);
         printf("                            ========================================================\n");
+        
         Sleep(3000);
         
-    
-    
-     
-	 
-     
-      	system("cls");
+		system("cls");
+		
+		
         printf("                            ========================================================");
         printf("\n\n\n                                       Bem Vindo A Cabine de Votação\n\n\n");
         printf("                                           Deseja Fazer seu voto?");
@@ -79,6 +76,7 @@
         printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
         printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
         printf("                            ========================================================\n");
+        
 	Sleep(2000);
      } 
      
@@ -91,11 +89,11 @@
     while(login2 == 1)
     {
          printf("                            ========================================================");
-         printf("\n\n                                        Insira o Número de Seu Candidato: \n\n            \n\n");
-         printf("\n\n                                        JULIANA FREITAS ------------ 1060 \n              \n\n");
-         printf("\n\n                                        BRYAN OLIVEIRA ------------- 1070 \n             \n\n");
-         printf("\n\n                                        VINICIUS ALMEIDA ----------- 1080 \n              \n\n");
-         printf("\n\n                                        ANA CARLOLINA -------------- 1090 \n              \n\n");
+         printf("\n\n                                        Insira o Número de Seu Candidato: \n\n            \n");
+         printf("\n                                        JULIANA FREITAS ------------ 1060 \n              \n");
+         printf("\n                                        BRYAN OLIVEIRA ------------- 1070 \n              \n");
+         printf("\n                                        VINICIUS ALMEIDA ----------- 1080 \n              \n");
+         printf("\n                                        ANA CARLOLINA -------------- 1090 \n              \n");
          printf("                            ========================================================\n");
          scanf("%d",&voto);
          system("cls");
@@ -129,8 +127,11 @@
          
          printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
      
+     	
          printf("\n\n\n                            ========================================================\n");
+         
          Sleep(2000);
+         
          system("cls");
          
 		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
@@ -151,7 +152,9 @@
          printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
      
          printf("\n\n\n                            ========================================================\n");
+         
           Sleep(2000);
+          
          system("cls");
         
           }
@@ -191,7 +194,9 @@
          printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
      
          printf("\n\n\n                            ========================================================\n");
+         
           Sleep(2000);
+          
          system("cls");
          
 		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
@@ -212,7 +217,9 @@
          printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
      
          printf("\n\n\n                            ========================================================\n");
+         
           Sleep(2000);
+          
          system("cls");
         
          }       
@@ -250,7 +257,9 @@
          printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
      
          printf("\n\n\n                            ========================================================\n");
+         
           Sleep(2000);
+          
          system("cls");
          
 		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
@@ -271,7 +280,9 @@
          printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
      
          printf("\n\n\n                            ========================================================\n");
+         
           Sleep(2000);
+          
          system("cls");
         
           }
@@ -308,7 +319,9 @@
          printf("\n\n\n                                              Voto Registrado Com Sucesso\n\n");
      
          printf("\n\n\n                            ========================================================\n");
+         
           Sleep(2000);
+          
          system("cls");
          
 		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
@@ -329,7 +342,9 @@
          printf("\n\n\n                                              Voto Anulado Com Sucesso\n\n");
      
          printf("\n\n\n                            ========================================================\n");
+         
           Sleep(2000);
+          
          system("cls");
          
          
@@ -347,7 +362,9 @@
         printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
         printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
         printf("                            ========================================================\n");
+        
 	Sleep(2000);
+	
 	system("cls");
      }
  
@@ -367,7 +384,9 @@
         printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
         printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
         printf("                            ========================================================\n");
+        
 	Sleep(2000);
+	
 	system("cls");
      }
         
@@ -382,8 +401,3 @@ if(login2 == 2)
 	}
 	}
 }
-
-
-
-
-
