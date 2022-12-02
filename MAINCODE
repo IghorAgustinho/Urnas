@@ -20,8 +20,8 @@
 	
 	//Variáveis Soma dos votos
 	
-	int votos_juliana , votos_bryan ,votos_ana;
-	int votos_vinicius;
+	int votos_juliana = 0 , votos_bryan = 0 ,votos_ana = 0,votos_vinicius = 0;
+
 	
     //Interface incial
     while(login1 = 1)
@@ -120,12 +120,14 @@
 		 
 		  if(confirmacao==1)
 		  {
-        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
+        //FOR Para Chegar Ao Vetor Referente a Cabine de Votação:
            
-		    while(i<sessao){i++;}
-		        
-            if(i==sessao);
-            {
+		    for(i=0;i<sessao;i++)
+		        {
+		        	if(i==sessao)
+		        	{
+					
+				
                 printf("                            ========================================================\n\n\n");
      
          
@@ -134,14 +136,12 @@
      	
          printf("\n\n\n                            ========================================================\n");
          
-         Sleep(2000);
-         
-         system("cls");
          
 		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
          juliana[i]=juliana[i]+1;
          i=0;
            
+	}
 		   }
 	      }
          
@@ -186,12 +186,13 @@
 		 
 		  if(confirmacao==1)
 		  {
-        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
+        //for Para Chegar Ao Vetor Referente a Cabine de Votação:
            
-		    while(i<sessao){i++;}
-		        
-            if(i==sessao);
-            {
+		    for(i=0;i<sessao;i++)
+		        {
+		        	if(i==sessao)
+		        	{
+					
                 printf("                            ========================================================\n\n\n");
      
          
@@ -206,6 +207,7 @@
 		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
          bryan[i]=bryan[i]+1;
          i=0;
+                   }
            
 		   }
 	      }
@@ -249,12 +251,14 @@
 		 
 		  if(confirmacao==1)
 		  {
-        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
+        //for Para Chegar Ao Vetor Referente a Cabine de Votação:
            
-		    while(i<sessao){i++;}
-		        
-            if(i==sessao);
-            {
+		   
+		    for(i=0;i<sessao;i++)
+		        {
+		        	if(i==sessao)
+		        	{
+					
                 printf("                            ========================================================\n\n\n");
      
          
@@ -269,7 +273,7 @@
 		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
          vinicius[i]=vinicius[i]+1;
          i=0;
-           
+                  }
 		   }
 	      }
          
@@ -311,12 +315,14 @@
 		 
 		  if(confirmacao==1)
 		  {
-        //While Para Chegar Ao Vetor Referente a Cabine de Votação:
+        //for Para Chegar Ao Vetor Referente a Cabine de Votação:
            
-		    while(i<sessao){i++;}
-		        
-            if(i==sessao);
-            {
+		    
+		    for(i=0;i<sessao;i++)
+		        {
+		        	if(i==sessao)
+		        	{
+					
                 printf("                            ========================================================\n\n\n");
      
          
@@ -331,7 +337,7 @@
 		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
          ana[i]=ana[i]+1;
          i=0;
-           
+              }
 		   }
 	      }
          
@@ -381,24 +387,27 @@
         printf("                            ========================================================\n");
         scanf("%d",&saida);
         if(saida == 1){system("cls");}//VOTAR NA MESMA URNA
-        if(saida == 2){break; system("cls");}//VOTAR EM RNAS DIFERENTES
+        if(saida == 2){break; system("cls");}//VOTAR EM URNAS DIFERENTES
         if(saida == 3)//CONTAGEM DOS VOTOS
    {
    	
-   	//contagem
    	for(i=0;i<20;i++)
-        votos_juliana = votos_juliana + juliana[i];
-        votos_bryan= votos_bryan + bryan[i];
-        votos_vinicius= votos_vinicius + vinicius[i];
-        votos_ana= votos_ana + ana[i];
+   	{
+	  votos_juliana = votos_juliana + juliana[i];
+      votos_bryan = votos_bryan + bryan[i];
+      votos_vinicius = votos_vinicius + vinicius[i];
+      votos_ana = votos_ana + ana[i];
+      
         printf("                            ========================================================");
-        printf("\n\n\n                                             VINICIUS COM %d VOTOS                                     \n\n\n",&votos_vinicius);
-        printf("\n\n\n                                             BRYAN COM %d VOTOS                                     \n\n\n",&votos_bryan);
-        printf("\n\n\n                                             ANA COM %d VOTOS                                     \n\n\n",&votos_ana);
-        printf("\n\n\n                                             JULIANA COM %d VOTOS                                     \n\n\n",&votos_juliana);
+        printf("\n\n\n                                             JULIANA COM %d VOTOS                                     \n\n\n",votos_juliana);
+        printf("\n\n\n                                             BRYAN COM %d VOTOS                                     \n\n\n",votos_bryan);
+		printf("\n\n\n                                             VINICIUS COM %d VOTOS                                     \n\n\n",votos_vinicius);
+        printf("\n\n\n                                             ANA COM %d VOTOS                                     \n\n\n",votos_ana);
+        
         printf("\n\n\n                                                                                          \n\n\n");
         printf("                            ========================================================\n");
         printf("\n\n\n");
+        Sleep(5000);
 
 
 	//JULIANA 1 LUGAR
@@ -644,6 +653,7 @@ if(votos_ana>votos_juliana && votos_ana>votos_bryan && votos_ana>votos_vinicius)
 	
 	system("cls");
      }
+ }
          
 
 
