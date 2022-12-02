@@ -12,21 +12,24 @@
        system("color 0a");
        setlocale(LC_ALL, "Portuguese");
             
-	//Variáveis De Votos Dos Candidatos (CADA VETOR É UMA URNA).
-    int juliana[20], bryan[20], vinicius[20], ana[20];
+	//Variáveis De Votos Dos Candidatos (CADA VETOR É RELACIONADO COM  UMA SESSAO).
+    int juliana[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}; 
+	int bryan[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	int vinicius[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};  
+	int ana[20]= {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};  
     
 	//Variáveis De Trabalho
-	int voto, login1 = 1 ,login2 = 0 ,confirmacao, i, saida,sessao; 
+	int voto, login1 = 1 , login2 = 0 , login3 = 0,confirmacao, i, saida, sessao; 
 	
 	//Variáveis Soma dos votos
 	
-	int votos_juliana = 0 , votos_bryan = 0 ,votos_ana = 0,votos_vinicius = 0;
+	int votos_juliana = 0 , votos_bryan = 0 ,votos_ana = 0,votos_vinicius = 0 ;
 
 	
     //Interface incial
     while(login1 = 1)
     {
-    	
+    	sessao = 0;
         system("cls");   
         printf("                            ========================================================");
         printf("\n\n\n                                           Bem Vindo A Cabine de Votação\n\n\n");
@@ -55,11 +58,9 @@
         printf("                            ========================================================");
         printf("\n\n\n                                                  Bem Vindo...\n\n\n");
         printf("                                            Sua Sessão é a de Número: ");
-        printf("\n\n\n                                                     [%d]\n\n\n                                         Por Favor Aguarde 3 Segundos.\n\n",sessao);
+        printf("\n\n\n                                                     [%d]\n\n\n                                         Por Favor Aguarde 2 Segundos.\n\n",sessao);
         printf("                            ========================================================\n");
-        
-        Sleep(3000);
-        
+        Sleep(2000);
 		system("cls");
 		
 		
@@ -84,20 +85,15 @@
 	Sleep(2000);
      } 
      
-	 
-     if(login2 == 1)
-     {
-     	
-     
-    //Começo da Área de Votação
+	 //Começo da Área de Votação
     while(login2 == 1)
     {
          printf("                            ========================================================");
-         printf("\n\n                                        Insira o Número de Seu Candidato: \n\n            \n");
-         printf("\n                                        JULIANA FREITAS ------------ 1060 \n              \n");
-         printf("\n                                        BRYAN OLIVEIRA ------------- 1070 \n              \n");
-         printf("\n                                        VINICIUS ALMEIDA ----------- 1080 \n              \n");
-         printf("\n                                        ANA CARLOLINA -------------- 1090 \n              \n");
+         printf("\n                                        Insira o Número de Seu Candidato: \n\n            \n");
+         printf("\n                                        JULIANA FREITAS ------------ 1060               \n");
+         printf("\n                                        BRYAN OLIVEIRA ------------- 1070               \n");
+         printf("\n                                        VINICIUS ALMEIDA ----------- 1080               \n");
+         printf("\n                                        ANA CARLOLINA -------------- 1090               \n");
          printf("                            ========================================================\n");
          scanf("%d",&voto);
          system("cls");
@@ -105,14 +101,14 @@
     //Primeiro Candidato
     if(voto==1060)
     {
-    printf("                            ========================================================\n\n\n");
+    printf("                            ========================================================\n");
      
          
-         printf("\n\n\n                                               Seu Candidato é:\n\n");
+         printf("\n                                               Seu Candidato é:\n\n");
          printf("\n                                               JULIANA FREITAS");
          printf("\n                                               NÚMERO 1060\n");
-         printf("\n\n\n                                      Confirma? 1 para sim e 2 para nao:\n");
-         printf("\n\n\n                            ========================================================\n");
+         printf("\n                                      Confirma? 1 para sim e 2 para não:\n");
+         printf("\n                            ========================================================\n");
          scanf("%d",&confirmacao);
          system("cls");
           
@@ -122,8 +118,9 @@
 		  {
         //FOR Para Chegar Ao Vetor Referente a Cabine de Votação:
            
-		    for(i=0;i<sessao;i++)
-		        {
+		    while(i<sessao)
+		        {i++;}
+		        	
 		        	if(i==sessao)
 		        	{
 					
@@ -135,15 +132,19 @@
      
      	
          printf("\n\n\n                            ========================================================\n");
+       
          
+		 //Soma dos Votos Já Efetuados Naquele Vetor
+		 juliana[i]++;
          
-		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
-         juliana[i]=juliana[i]+1;
-         i=0;
+           Sleep(2000);
+         system("cls");
+    
+         
            
-	}
-		   }
-	      }
+	               }
+		      }
+	      
          
          //Caso Seja Anulado o Voto:  
 		 
@@ -162,6 +163,15 @@
          system("cls");
         
           }
+           if(confirmacao<1||confirmacao>2)
+     {
+        printf("                            ========================================================");
+        printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
+        printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
+        printf("                            ========================================================\n");
+        
+	Sleep(2000);
+     } 
     }
            
          
@@ -188,8 +198,9 @@
 		  {
         //for Para Chegar Ao Vetor Referente a Cabine de Votação:
            
-		    for(i=0;i<sessao;i++)
-		        {
+		    while(i<sessao)
+		    {i++;}
+		        
 		        	if(i==sessao)
 		        	{
 					
@@ -199,18 +210,17 @@
          printf("\n\n\n                                            Voto Registrado Com Sucesso\n\n");
      
          printf("\n\n\n                            ========================================================\n");
-         
           Sleep(2000);
-          
          system("cls");
          
-		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
-         bryan[i]=bryan[i]+1;
-         i=0;
+		 //Soma dos Votos Já Efetuados Naquele Vetor
+         bryan[i]++;
+		 
+        
                    }
            
 		   }
-	      }
+	      
          
          //Caso Seja Anulado o Voto:  
 		 
@@ -228,7 +238,17 @@
           
          system("cls");
         
-         }       
+         }   
+         
+		 if(confirmacao<1||confirmacao>2)
+     {
+        printf("                            ========================================================");
+        printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
+        printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
+        printf("                            ========================================================\n");
+        
+	Sleep(2000);
+     }     
    }
 
 
@@ -254,8 +274,8 @@
         //for Para Chegar Ao Vetor Referente a Cabine de Votação:
            
 		   
-		    for(i=0;i<sessao;i++)
-		        {
+		    while(i<sessao)
+		        {i++;}
 		        	if(i==sessao)
 		        	{
 					
@@ -270,12 +290,13 @@
           
          system("cls");
          
-		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
-         vinicius[i]=vinicius[i]+1;
-         i=0;
+		 //Soma dos Votos Já Efetuados Naquele Vetor
+         vinicius[i]++;
+		
+         
                   }
 		   }
-	      }
+	      
          
          //Caso Seja Anulado o Voto:  
 		 
@@ -294,6 +315,15 @@
          system("cls");
         
           }
+          	 if(confirmacao<1||confirmacao>2)
+     {
+        printf("                            ========================================================");
+        printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
+        printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
+        printf("                            ========================================================\n");
+        
+	Sleep(2000);
+     }
       }
 
 
@@ -317,9 +347,9 @@
 		  {
         //for Para Chegar Ao Vetor Referente a Cabine de Votação:
            
-		    
-		    for(i=0;i<sessao;i++)
-		        {
+		   
+		    while(i<sessao)
+		        {i++;}
 		        	if(i==sessao)
 		        	{
 					
@@ -333,12 +363,14 @@
           Sleep(2000);
           
          system("cls");
+        
          
 		 //Soma dos Votos Já Efetuados Naquele Vetor E Reset do "i" para zero, assim resetando a urna.
-         ana[i]=ana[i]+1;
+         ana[i]++;
+		 
          i=0;
               }
-		   }
+		   
 	      }
          
          //Caso Seja Anulado o Voto:  
@@ -362,6 +394,15 @@
          
         
           }
+          	 if(confirmacao<1||confirmacao>2)
+     {
+        printf("                            ========================================================");
+        printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
+        printf("\n\n\n                                               AGUARDE 2 SEGUNDOS                                        \n\n\n");
+        printf("                            ========================================================\n");
+        
+	Sleep(2000);
+     }
           
       }
   
@@ -377,93 +418,100 @@
 	
 	system("cls");
      }
- 
+
      
      //Saida do While de Votação
+        system("cls");
         printf("                            ========================================================");
         printf("\n\n\n                                             DESEJA CONTINUAR VOTANDO?                                       \n\n\n");
         printf("\n\n\n                                     1-SIM (MESMA SESSÂO) 2-NÃO (MUDAR A SESSÃO)                                        \n\n\n");
         printf("\n\n\n                                                   3-VER RESULTADOS                                      \n\n\n");
         printf("                            ========================================================\n");
         scanf("%d",&saida);
+        system("cls");
         if(saida == 1){system("cls");}//VOTAR NA MESMA URNA
         if(saida == 2){break; system("cls");}//VOTAR EM URNAS DIFERENTES
         if(saida == 3)//CONTAGEM DOS VOTOS
+        
    {
-   	
    	for(i=0;i<20;i++)
    	{
-	  votos_juliana = votos_juliana + juliana[i];
-      votos_bryan = votos_bryan + bryan[i];
-      votos_vinicius = votos_vinicius + vinicius[i];
-      votos_ana = votos_ana + ana[i];
-      
+	  votos_juliana = votos_juliana+ juliana[i];
+	  votos_bryan = bryan[i]+votos_bryan;
+	  votos_vinicius = vinicius[i]+votos_vinicius;
+	  votos_ana = ana[i]+votos_ana;
+    }
+
         printf("                            ========================================================");
-        printf("\n\n\n                                             JULIANA COM %d VOTOS                                     \n\n\n",votos_juliana);
-        printf("\n\n\n                                             BRYAN COM %d VOTOS                                     \n\n\n",votos_bryan);
-		printf("\n\n\n                                             VINICIUS COM %d VOTOS                                     \n\n\n",votos_vinicius);
-        printf("\n\n\n                                             ANA COM %d VOTOS                                     \n\n\n",votos_ana);
-        
-        printf("\n\n\n                                                                                          \n\n\n");
+        printf("\n\n                                           JULIANA COM %d VOTOS                                     ",votos_juliana);
+        printf("\n\n                                           BRYAN COM %d VOTOS                                     ",votos_bryan);
+		printf("\n\n                                           VINICIUS COM %d VOTOS                                     ",votos_vinicius);
+        printf("\n\n                                           ANA COM %d VOTOS                                     \n",votos_ana);
         printf("                            ========================================================\n");
-        printf("\n\n\n");
-        Sleep(5000);
-
-
+        printf("\n");
+        
 	//JULIANA 1 LUGAR
 
 if(votos_juliana > votos_bryan && votos_juliana > votos_vinicius && votos_juliana > votos_ana)
 {
-	printf("1- LUGAR : JULIANA com %d\n",votos_juliana);
+	printf("                                           1- LUGAR : JULIANA \n");
    
     if(votos_bryan>votos_vinicius && votos_bryan>votos_ana)
     {
-    	printf("2- LUGAR : BRYAN com\n");
+    	printf("                                           2- LUGAR : BRYAN\n");
     	
          if(votos_ana>votos_vinicius)
         {
-            printf("3- LUGAR: ANA JULIA\n");
-            printf("4- LUGAR: VINICIUS\n");
+            printf("                                           3- LUGAR: ANA CAROLINA\n");
+            printf("                                           4- LUGAR: VINICIUS\n");
         }
           if(votos_vinicius>votos_ana)
         {
-            printf("3- LUGAR: VINICUS\n");
-             printf("4- LUGAR: ANA JULIA\n");
+            printf("                                           3- LUGAR: VINICUS\n");
+             printf("                                           4- LUGAR: ANA CAROLINA\n");
         }
     }
     
      if(votos_vinicius > votos_bryan && votos_vinicius >votos_ana)
     {
-    	printf("2- LUGAR : VINICIUS\n");
+    	printf("                                           2- LUGAR : VINICIUS\n");
     	
     	 if(votos_ana>votos_bryan)
         {
-            printf("3- LUGAR: ANA JULIA\n");
-            printf("4- LUGAR: BRYAN\n");
+            printf("                                           3- LUGAR: ANA CAROLINA\n");
+            printf("                                           4- LUGAR: BRYAN\n");
         }
           if(votos_bryan>votos_ana)
         {
-            printf("3- LUGAR: BRYAN\n");
-             printf("4- LUGAR: ANA JULIA\n");
+            printf("                                           3- LUGAR: BRYAN\n");
+             printf("                                           4- LUGAR: ANA CAROLINA\n");
         }
         
     }
      if(votos_ana>votos_bryan && votos_ana>votos_vinicius)
     {
-    	printf("2- LUGAR : ANA JULIA\n");
+    	printf("                                           2- LUGAR : ANA CAROLINA\n");
     	
     	 if(votos_vinicius>votos_bryan)
         {
-            printf("3- LUGAR: VINICIUS\n");
-            printf("4- LUGAR: BRYAN\n");
+            printf("                                           3- LUGAR: VINICIUS\n");
+            printf("                                           4- LUGAR: BRYAN\n");
         }
           if(votos_bryan>votos_vinicius)
         {
-            printf("3- LUGAR: BRYAN\n");
-             printf("4- LUGAR: VINICIUS\n");
+            printf("                                           3- LUGAR: BRYAN\n");
+             printf("                                           4- LUGAR: VINICIUS\n");
         }
         
     }
+          printf("                            ========================================================\n");
+         printf("\n\n                                             Deseja Continuar?\n\n                                                   1-SIM 2- NÂO\n\n");
+         printf("                            ========================================================\n");
+    scanf("%d",&login3);
+    
+    if(login3 == 1) {break;system("cls");}
+    else
+    {if(login3 == 2){system("cls"); printf("\n\n\n\n\n\n\n                                  Se Ta Em C# Amigão, Da Um ALT + F4 ai KKKKKKK\n\n\n\n\n\n\n");}}
 }
 }
 
@@ -473,56 +521,64 @@ if(votos_juliana > votos_bryan && votos_juliana > votos_vinicius && votos_julian
 
 if(votos_bryan>votos_juliana && votos_bryan>votos_vinicius && votos_bryan>votos_ana)
 {
-	printf("1- LUGAR : BRYAN\n");
+	printf("                                           1- LUGAR : BRYAN\n");
    
     if(votos_juliana>votos_vinicius && votos_juliana>votos_ana)
     {
-    	printf("2- LUGAR : JULIANA\n");
+    	printf("                                           2- LUGAR : JULIANA\n");
     	
          if(votos_ana>votos_vinicius)
         {
-            printf("3- LUGAR: ANA JULIA\n");
-            printf("4- LUGAR: VINICIUS\n");
+            printf("                                           3- LUGAR: ANA CAROLINA\n");
+            printf("                                           4- LUGAR: VINICIUS\n");
         }
           if(votos_vinicius>votos_ana)
         {
-            printf("3- LUGAR: VINICUS\n");
-             printf("4- LUGAR: ANA JULIA\n");
+            printf("                                           3- LUGAR: VINICUS\n");
+             printf("                                           4- LUGAR: ANA CAROLINA\n");
         }
     }
     
      if(votos_vinicius>votos_bryan && votos_vinicius>votos_ana)
     {
-    	printf("2- LUGAR : VINICIUS\n");
+    	printf("                                           2- LUGAR : VINICIUS\n");
     	
     	 if(votos_ana>votos_juliana)
         {
-            printf("3- LUGAR: ANA JULIA\n");
-            printf("4- LUGAR: JULIANA\n");
+            printf("                                           3- LUGAR: ANA CAROLINA\n");
+            printf("                                           4- LUGAR: JULIANA\n");
         }
           if(votos_juliana>votos_ana)
         {
-            printf("3- LUGAR: JULIANA\n");
-             printf("4- LUGAR: ANA JULIA\n");
+            printf("                                          3- LUGAR: JULIANA\n");
+             printf("                                           4- LUGAR: ANA CAROLINA\n");
         }
         
     }
      if(votos_ana>votos_bryan && votos_ana>votos_vinicius)
     {
-    	printf("2- LUGAR : ANA JULIA\n");
+    	printf("                                          2- LUGAR : ANA CAROLINA\n");
     	
     	 if(votos_vinicius>votos_juliana)
         {
-            printf("3- LUGAR: VINICIUS\n");
+            printf("                                           3- LUGAR: VINICIUS\n");
             printf("4- LUGAR: JULIANA\n");
         }
           if(votos_juliana>votos_vinicius)
         {
-            printf("3- LUGAR: JULIANA\n");
-             printf("4- LUGAR: VINICIUS\n");
+            printf("                                           3- LUGAR: JULIANA\n");
+             printf("                                           4- LUGAR: VINICIUS\n");
         }
         
     }
+         printf("                            ========================================================\n");
+         printf("\n\n                                             Deseja Continuar?\n\n                                             1-SIM 2- NÂO\n\n");
+         printf("                            ========================================================\n");
+    scanf("%d",&login3);
+    
+    if(login3 == 1) {break;system("cls");}
+    else
+    {if(login3 == 2){system("cls"); printf("\n\n\n\n\n\n\n                                  Se Ta Em C# Amigão, Da Um ALT + F4 ai KKKKKKK\n\n\n\n\n\n\n");}}
 }
 }
 
@@ -530,119 +586,132 @@ if(votos_bryan>votos_juliana && votos_bryan>votos_vinicius && votos_bryan>votos_
 
 if(votos_vinicius>votos_juliana && votos_vinicius>votos_bryan && votos_vinicius>votos_ana)
 {
-	printf("1- LUGAR : VINICIUS\n");
+	printf("                                           1- LUGAR : VINICIUS\n");
    
     if(votos_juliana>votos_bryan && votos_juliana>votos_ana)
     {
-    	printf("2- LUGAR : JULIANA\n");
+    	printf("                                           2- LUGAR : JULIANA\n");
     	
          if(votos_ana>votos_bryan)
         {
-            printf("3- LUGAR: ANA JULIA\n");
-            printf("4- LUGAR:BRYAN\n");
+            printf("                                           3- LUGAR: ANA CAROLINA\n");
+            printf("                                           4- LUGAR:BRYAN\n");
         }
           if(votos_bryan>votos_ana)
         {
-            printf("3- LUGAR: BRYAN\n");
-             printf("4- LUGAR: ANA JULIA\n");
+            printf("                                           3- LUGAR: BRYAN\n");
+             printf("                                           4- LUGAR: ANA CAROLINA\n");
         }
     }
     
      if(votos_bryan>votos_juliana&& votos_bryan>votos_ana)
     {
-    	printf("2- LUGAR : BRYAN\n");
+    	printf("                                           2- LUGAR : BRYAN\n");
     	
     	 if(votos_ana>votos_juliana)
         {
-            printf("3- LUGAR: ANA JULIA\n");
-            printf("4- LUGAR: JULIANA\n");
+            printf("                                           3- LUGAR: ANA CAROLINA\n");
+            printf("                                           4- LUGAR: JULIANA\n");
         }
           if(votos_juliana>votos_ana)
         {
-            printf("3- LUGAR: JULIANA\n");
-             printf("4- LUGAR: ANA JULIA\n");
+            printf("                                           3- LUGAR: JULIANA\n");
+             printf("                                           4- LUGAR: ANA CAROLINA\n");
         }
         
     }
      if(votos_ana>votos_bryan && votos_ana>votos_juliana)
     {
-    	printf("2- LUGAR : ANA JULIA\n");
+    	printf("                                           2- LUGAR : ANA JULIA\n");
     	
     	 if(votos_bryan>votos_juliana)
         {
-            printf("3- LUGAR: BRYAN\n");
-            printf("4- LUGAR: JULIANA\n");
+            printf("                                           3- LUGAR: BRYAN\n");
+            printf("                                           4- LUGAR: JULIANA\n");
         }
           if(votos_juliana>votos_bryan)
         {
-            printf("3- LUGAR: JULIANA\n");
-             printf("4- LUGAR: BRYAN\n");
+            printf("                                           3- LUGAR: JULIANA\n");
+             printf("                                           4- LUGAR: BRYAN\n");
         }
         
     }
+         printf("                            ========================================================\n");
+         printf("\n\n                                             Deseja Continuar?\n\n                                                1-SIM 2- NÂO\n\n");
+         printf("                            ========================================================\n");
+    scanf("%d",&login3);
+    
+    if(login3 == 1) {break;system("cls");}
+    else
+    {if(login3 == 2){system("cls"); printf("\n\n\n\n\n\n\n                                  Se Ta Em C# Amigão, Da Um ALT + F4 ai KKKKKKK\n\n\n\n\n\n\n");}}
+	
 }
-}
+
 
 	//ANA 1 LUGAR
 
 if(votos_ana>votos_juliana && votos_ana>votos_bryan && votos_ana>votos_vinicius)
 {
-	printf("1- LUGAR : ANA JULIA\n");
+	printf("                                           1- LUGAR : ANA CAROLINA\n");
    
     if(votos_juliana>votos_bryan && votos_juliana>votos_vinicius)
     {
-    	printf("2- LUGAR : JULIANA\n");
+    	printf("                                           2- LUGAR : JULIANA\n");
     	
          if(votos_vinicius>votos_bryan)
         {
-            printf("3- LUGAR: VINICIUS\n");
-            printf("4- LUGAR:BRYAN\n");
+            printf("                                           3- LUGAR: VINICIUS\n");
+            printf("                                           4- LUGAR:BRYAN\n");
         }
           if(votos_bryan>votos_vinicius)
         {
-            printf("3- LUGAR: BRYAN\n");
-             printf("4- LUGAR: VINICIUS\n");
+            printf("                                           3- LUGAR: BRYAN\n");
+             printf("                                           4- LUGAR: VINICIUS\n");
         }
     }
     
      if(votos_bryan>votos_juliana&& votos_bryan>votos_vinicius)
     {
-    	printf("2- LUGAR : BRYAN\n");
+    	printf("                                           2- LUGAR : BRYAN\n");
     	
     	 if(votos_vinicius>votos_juliana)
         {
-            printf("3- LUGAR: VINICIUS\n");
-            printf("4- LUGAR: JULIANA\n");
+            printf("                                           3- LUGAR: VINICIUS\n");
+            printf("                                           4- LUGAR: JULIANA\n");
         }
           if(votos_juliana>votos_vinicius)
         {
-            printf("3- LUGAR: JULIANA\n");
-             printf("4- LUGAR: VINICIUS\n");
+            printf("                                           3- LUGAR: JULIANA\n");
+             printf("                                           4- LUGAR: VINICIUS\n");
         }
         
     }
      if(votos_vinicius>votos_bryan && votos_vinicius>votos_juliana)
     {
-    	printf("2- LUGAR : VINICIUS\n");
+    	printf("                                           2- LUGAR : VINICIUS\n");
     	
     	 if(votos_bryan>votos_juliana)
         {
-            printf("3- LUGAR: BRYAN\n");
-            printf("4- LUGAR: JULIANA\n");
+            printf("                                          3- LUGAR: BRYAN\n");
+            printf("                                           4- LUGAR: JULIANA\n");
         }
           if(votos_juliana>votos_bryan)
         {
-            printf("3- LUGAR: JULIANA\n");
-             printf("4- LUGAR: BRYAN\n");
+            printf("                                           3- LUGAR: JULIANA\n");
+             printf("                                           4- LUGAR: BRYAN\n");
         }
         
-    }
 }
+printf("                            ========================================================\n");
+         printf("\n\n                                             Deseja Continuar?\n\n                                                1-SIM 2- NÂO\n\n");
+         printf("                            ========================================================\n");
+    scanf("%d",&login3);
+    
+    if(login3 == 1) {break;system("cls");}
+    else
+    {if(login3 == 2){system("cls"); printf("\n\n\n\n\n\n\n                                  Se Ta Em C# Amigão, Da Um ALT + F4 ai KKKKKKK\n\n\n\n\n\n\n");}}
 }
-	       
-   }
-      
-	     if(saida<1||saida>3)
+if(saida<1||saida>3)
      {
         printf("                            ========================================================");
         printf("\n\n\n                                             ERRO, NÚMERO INVÁLIDO                                       \n\n\n");
@@ -653,16 +722,21 @@ if(votos_ana>votos_juliana && votos_ana>votos_bryan && votos_ana>votos_vinicius)
 	
 	system("cls");
      }
- }
-         
+ 
+	   
 
 
 if(login2 == 2)
 {
 	return(0);
 }
+}
+}
+}
 
-
+	       
+   
+      
+	
 	
 
-}
