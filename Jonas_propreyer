@@ -1,5 +1,6 @@
 soma
-Votos_Juliana = Votos_Juliana + juliana[i];
+for(i=0;i<0;i++)
+        Votos_Juliana = Votos_Juliana + juliana[i];
         Votos_bryan= Votos_bryan + bryan[i];
         Votos_vinicius= Votos_vinicius + vinicius[i];
         Votos_ana= Votos_ana + ana[i];
