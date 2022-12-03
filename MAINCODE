@@ -504,16 +504,9 @@ if(votos_juliana > votos_bryan && votos_juliana > votos_vinicius && votos_julian
         }
         
     }
-          printf("                            ========================================================\n");
-         printf("\n\n                                             Deseja Continuar?\n\n                                                   1-SIM 2- NÂO\n\n");
-         printf("                            ========================================================\n");
-    scanf("%d",&login3);
     
-    if(login3 == 1) {break;system("cls");}
-    else
-    {if(login3 == 2){system("cls"); printf("\n\n\n\n\n\n\n                                  Se Ta Em C# Amigão, Da Um ALT + F4 ai KKKKKKK\n\n\n\n\n\n\n");}}
 }
-}
+
 
 
 {
@@ -571,14 +564,7 @@ if(votos_bryan>votos_juliana && votos_bryan>votos_vinicius && votos_bryan>votos_
         }
         
     }
-         printf("                            ========================================================\n");
-         printf("\n\n                                             Deseja Continuar?\n\n                                             1-SIM 2- NÂO\n\n");
-         printf("                            ========================================================\n");
-    scanf("%d",&login3);
-    
-    if(login3 == 1) {break;system("cls");}
-    else
-    {if(login3 == 2){system("cls"); printf("\n\n\n\n\n\n\n                                  Se Ta Em C# Amigão, Da Um ALT + F4 ai KKKKKKK\n\n\n\n\n\n\n");}}
+   
 }
 }
 
@@ -636,15 +622,7 @@ if(votos_vinicius>votos_juliana && votos_vinicius>votos_bryan && votos_vinicius>
         }
         
     }
-         printf("                            ========================================================\n");
-         printf("\n\n                                             Deseja Continuar?\n\n                                                1-SIM 2- NÂO\n\n");
-         printf("                            ========================================================\n");
-    scanf("%d",&login3);
-    
-    if(login3 == 1) {break;system("cls");}
-    else
-    {if(login3 == 2){system("cls"); printf("\n\n\n\n\n\n\n                                  Se Ta Em C# Amigão, Da Um ALT + F4 ai KKKKKKK\n\n\n\n\n\n\n");}}
-	
+ 
 }
 
 
@@ -701,16 +679,136 @@ if(votos_ana>votos_juliana && votos_ana>votos_bryan && votos_ana>votos_vinicius)
              printf("                                           4- LUGAR: BRYAN\n");
         }
         
+   }
 }
-printf("                            ========================================================\n");
-         printf("\n\n                                             Deseja Continuar?\n\n                                                1-SIM 2- NÂO\n\n");
-         printf("                            ========================================================\n");
-    scanf("%d",&login3);
-    
-    if(login3 == 1) {break;system("cls");}
-    else
-    {if(login3 == 2){system("cls"); printf("\n\n\n\n\n\n\n                                  Se Ta Em C# Amigão, Da Um ALT + F4 ai KKKKKKK\n\n\n\n\n\n\n");}}
+
+//4 EMPATES
+if(votos_bryan == votos_vinicius && votos_ana == votos_juliana)
+    {
+printf("                                          EMPATE DE:\n                                          BRYAN\n                                          VINICIUS\n");
+	   	 	printf("                                           ANA\n                                           JULIANA\n                                           10s FINALIZANDO");
+	   	 	Sleep(10000);
+	   	 	return(0);
+	}
+		
+
+	//3 EMPATES - VITORIA JULIANA
+
+	  if(votos_bryan == votos_vinicius && votos_bryan == votos_ana)
+    {
+printf("                                          EMPATE DE:\n                                          BRYAN\n                                          VINICIUS\n");
+	
+	   	 	printf("                                           ANA\n                                           10s FINALIZANDO");
+	   	 	Sleep(10000);
+	   	 	return(0);
+		}
+	
+	//3 EMPATES - VITORIA BRYAN
+
+	  if(votos_juliana == votos_vinicius && votos_ana == votos_vinicius)
+    {
+printf("                                          EMPATE DE:\n                                         JULIANA\n                                          VINICIUS\n");
+	   	 	printf("                                           ANA\n                                           10s FINALIZANDO");
+	   	 	Sleep(10000);
+	   	 	return(0);
+	   
+		}
+	
+	//3 EMPATES - VITORIA VINICIUS
+	  if(votos_juliana == votos_bryan && votos_ana == votos_bryan)
+    {
+printf("                                          EMPATE DE:\n                                         JULIANA\n                                          BRYAN\n");
+
+	   	 	printf("                                           ANA\n                                           10s FINALIZANDO");
+	   	 	Sleep(10000);
+	   	 	return(0);
+		}
+		//3 ou 1 EMPATES - VITORIA ANA
+
+	  if(votos_juliana == votos_vinicius && votos_bryan == votos_vinicius )
+    {
+printf("                                          EMPATE DE:\n                                         JULIANA\n                                          VINICIUS\n");
+	
+	   if(votos_bryan == votos_juliana)
+	   
+	   	 	printf("                                           BRYAN\n                                           10s FINALIZANDO");
+	   	 	Sleep(10000);
+	   	 	return(0);
+		}
+		
+			//1 EMPATE - VITORIA JULIANA OU BRYAN
+
+	  if(votos_vinicius == votos_ana)
+    {
+printf("                                          EMPATE DE:\n                                          VINICIUS\n");
+	
+	   	 	printf("                                           ANA\n                                           10s FINALIZANDO");
+	   	 	Sleep(10000);
+	   	 	return(0);
+		}
+			//1 EMPATE - VITORIA JULIANA OU VINICIUS
+
+	  if(votos_bryan == votos_ana)
+    {
+printf("                                          EMPATE DE:\                                          BRYAN\n");
+	
+	   	 	printf("                                           ANA\n                                           10s FINALIZANDO");
+	   	 	Sleep(10000);
+	   	 	return(0);
+		}
+			//1 EMPATE - VITORIA JULIANA OU ANA
+
+	  if(votos_vinicius == votos_bryan)
+    {
+printf("                                          EMPATE DE:\                                          VINICIUS\n");
+	
+	   	 	printf("                                           BRYAN\n                                           10s FINALIZANDO");
+	   	 	Sleep(10000);
+	   	 	return(0);
+		}
+			//1 EMPATE - VITORIA BRYAN OU VINICIUS
+
+	  if(votos_juliana == votos_ana)
+    {
+printf("                                          EMPATE DE:\                                          JULIANA\n");
+	
+	   	 	printf("                                           ANA\n                                           10s FINALIZANDO");
+	   	 	Sleep(10000);
+	   	 	return(0);
+		}
+				//1 EMPATE - VITORIA BRYAN OU ANA
+
+	  if(votos_juliana == votos_vinicius)
+    {
+printf("                                          EMPATE DE:\                                          JULIANA\n");
+	
+	   	 	printf("                                           VINICIUS\n                                           10s FINALIZANDO");
+	   	 	Sleep(10000);
+	   	 	return(0);
+		}
+				//1 EMPATE - VITORIA VINICIUS OU ANA
+
+	  if(votos_bryan == votos_juliana)
+    {
+printf("                                          EMPATE DE:\                                          JULIANA\n");
+	
+	   	 	printf("                                          BRYAN\n                                           10s FINALIZANDO");
+	   	 	Sleep(10000);
+	   	 	return(0);
+		}
+	}
+	}
+
+	   
+	
+	
+
+
+
+
+
 }
+
 if(saida<1||saida>3)
      {
         printf("                            ========================================================");
@@ -727,9 +825,11 @@ if(saida<1||saida>3)
 
 
 if(login2 == 2)
-{
+ {
 	return(0);
+ }
+
 }
-}
-}
-}
+
+
+
