@@ -1,0 +1,67 @@
+Relatório de Código: Urna Eletrônica
+
+
+
+Programadores: Ighor Alexandre, Leonardo Kanzaki e Jonas Mesquita
+
+O começo foi simples, começamos organizando o código em partes, e criando repositórios na plataforma “GitHub”, tivemos várias ideias de como prosseguir com o código, e decidimos que cada um ia fazer uma das partes do código, separadas por 3 (1 para cada), e foram elas:
+
+*  1- Criação das 20 sessões de voto:
+
+   Essa parte ficou com o Leonardo, foram utilizados vetores de 20 posições em cada candidato             ( referente aos  20 diferentes lugares de votação ) para armazenar os votos de cada sessão, fazendo que os votos fiquem separados.
+
+* 2- Criação da Urna para receber cada voto e para armazena-los:
+
+  Essa parte quem ficou responsável foi o Ighor, foram utilizados conjuntos de “Whiles”, “For’s” e “If’s” para criação das cabines de voto, criando várias situações possíveis, foi possível receber os votos e armazená-los sem maiores problemas. 
+
+* 3- Criação dos Sistemas de Soma e Resultados da Urna:
+
+  Está parte foi designada ao Jonas, e bem, a lógica estava correta, mas tinha alguns erros graves programação básica, como colocar 2 “main’s” no sistema ( um dentro do outro, o que sem perceber isso resultou em m bom tempo procurando o problema), e algumas dificuldades com “While’s”, pois não sabia o que era, mas fora alguns erros simples, deu andamento sem problemas.
+
+* 4- Junção dos 3 Códigos Diferentes:
+
+ A parte em que criamos um main code, e juntamos os três códigos teve as dificuldades de toda vez que fazemos isso : erros em nomes de variáveis, chaves a mais, erros de lógica e os outros erros comuns, após resolvermos tudo e continuarmos, surgiu um problema simples mas muito estressante: A Aparição de números randômicos dentro de nossos vetores, impossibilitando a soma...
+
+* 5- Resolução de problemas, e problemas ( mas não do código ):
+
+    Depois de quebrarmos a cabeça tentando resolver, chega a parte do estresse, pois ali já tinha mais de 8 horas contínuas de trabalho no código, e um prazo de 32 horas a cumprir, com várias tentativas sem êxito de correção, Leonardo então cansado, começou a ter sintomas como sono e bastante dor de cabeça, Ighor estava estressado com a situação, e depois de programar incansavelmente sem nem uma pausa para comer ou jogar, teve ainda que ensinar a Jonas como usar um “While” e sem paciência mostrar que a ordem dos fatores altera SIM o resultado, e além disso, mostrar a Leonardo como uma sequência de “IF’s” podem poupar muito espaço e tempo, pois poderia criar condições especificas no mesmo “IF”, após muita pesquisa de Ighor em fóruns e vídeos, mas sem êxito, e o estresse com as piadas descontraídas de Jonas em um momento que precisávamos pensar em uma solução, Leonardo lembrou de uma frase do nosso professor, que ajudou na jornada: “As vezes é necessário dormir um pouco, assim a resposta simplesmente pode aparecer na sua mente no dia seguinte”, e assim foi, todos saíram da chamada e foram descansar...
+
+
+* 6 – A solução...?
+
+  No outro dia (último dia do prazo), Ighor decidiu que iria se ausentar do colégio para se focar completamente no código, então, assim foi, ficou em casa e começou a sessão ali pelas 8am...
+
+  Após algumas horas, 5h para ser especifico, e também MUITA revisão no código e alterações estéticas, Ighor finalmente achou a solução: “Se estão ocorrendo números aleatórios, é só eu predefinir números que apenas podem ser modificados com uma variável”, e assim testou, e a soma funcionou, mas surgiu outro problema...
+
+* 7 – Agora sim, a Solução:
+
+
+Os números estavam se duplicando... E ele sabia a fonte do problema, a leitura dos votos, assim, utilizou de vários métodos para lê-los, “for’s” com “i++” e outras alternativas, até pensar na lógica por trás e decidir simplesmente que iria apenas colocar “ ‘váriavel’++” , e assim pronto, consertou o erro e continuou o processo.
+
+* 8 – Finalização:
+
+  Para finalizar, Leonardo centralizou os textos e melhorou a estética do código, além de adicionar comentários explicando cada coisa, e após isso, estava tudo certo até chegar a parte que ninguém sabia resolver, “Como fechar o código?”, e bom,  as vezes existe o jeito brasileiro de fazer as coisas, e Ighor como um brasileiro raiz, deixou ao final, na escolha de finalizar o código uma icônica frase:
+
+“Irmão, tu tá em C#, dá um ALT + F4 aí KKKKKKKKK”
+
+e assim, o código estava finalmente completo :D .
+
+
+* 9 – Conclusões:
+
+ Ighor: Explicar algo é muito difícil quando a pessoa não percebe o que está fazendo, github é muito bom, e as vezes é preciso descansar depois de um longo tempo de trabalho.
+
+Leonardo: Pensar muito cansa, explicar coisa pro Jonas também, e “IF’s” podem salvar de muito tempo atoa.
+
+Jonas: Devia ter prestado mais atenção na aula, CTRL + V não é bom, Maiúscula em Variável muda sim, e aprendeu coisas como “While”, não tem & em printf e outras coisas.
+
+
+
+
+FIM :D
+
+
+
+
+Escrita por Jonas e Leonardo.
+Reescrita por Ighor.
